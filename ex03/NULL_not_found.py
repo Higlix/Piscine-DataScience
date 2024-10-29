@@ -21,9 +21,9 @@ def NULL_not_found(object: any) -> int:
     elif object == 0 and type(object) is int:
         print(f"Zero: {object} {type(object)}")
     elif type(object) is float:
-        print(f"cheese: {object} {type(object)}")
+        print(f"Cheese: {object} {type(object)}")
     elif object == '':
-        print(f"empty: {object} {type(object)}")
+        print(f"Empty: {object} {type(object)}")
     elif type(object) is str and type_name != "Type not Found":
         print(f"{type(object)}: {object} ")
     elif not object and type(object) is bool:
@@ -31,7 +31,7 @@ def NULL_not_found(object: any) -> int:
     else:
         print("Type not Found")
 
-    if flag ==1:
+    if flag == 1:
         return 1
     return 0
         
