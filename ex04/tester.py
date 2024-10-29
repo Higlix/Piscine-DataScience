@@ -8,7 +8,7 @@ print("$> ")
 # TEST 2
 print("$> python3 whatis.py -5")
 os.system("python3 whatis.py -5")
-print("$> ")
+print("$>    ")
 
 # TEST 3
 print("$> python3 whatis.py")
