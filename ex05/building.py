@@ -1,14 +1,18 @@
 import sys
+import string
 
 
 def countChars(sentence: str):
+    """
+        This counts and prints the chacaters
+        of the sentence that is provided
+    """
     character_count = len(sentence)
     upper_count = 0
     lower_count = 0
     punc_count = 0
     space_count = 0
     digit_count = 0
-    p = ["!", ".", ",", "?", "-", "_", '"', "'", ";", ":", "{", "}", "[", "]"]
     for c in sentence:
         if c.islower():
             lower_count += 1
@@ -18,7 +22,7 @@ def countChars(sentence: str):
             digit_count += 1
         elif c.isspace():
             space_count += 1
-        elif c in p:
+        elif c in string.punctuation:
             punc_count += 1
     print(f"The text contains {character_count} characters:")
     print(f"{upper_count} upper letters")
@@ -29,6 +33,9 @@ def countChars(sentence: str):
 
 
 def takeInput() -> str:
+    """
+        Takes input if none is given
+    """
     sentence = input("What is the text to count?\n")
     if len(sentence) > 0:
         return sentence
@@ -36,6 +43,10 @@ def takeInput() -> str:
 
 
 def main():
+    """
+        First function that is called
+        Main function
+    """
     number_of_args = len(sys.argv)
     sentence = ""
     if number_of_args == 1:
