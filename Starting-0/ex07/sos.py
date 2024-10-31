@@ -41,11 +41,13 @@ NESTED_MORSE = {
     "9": "----."
 }
 
+
 def doMorse(string: str):
     """ Encode text into Morse """
     morse = " "
     text = [NESTED_MORSE[char.upper()] for char in string]
     return morse.join(text)
+
 
 def main():
     """ Main Function """
@@ -53,9 +55,8 @@ def main():
         number_of_args = len(sys.argv)
         if number_of_args == 2:
             string = sys.argv[1]
-            isAlphaNumeric = lambda a: a.isalpha() or a.isdigit()
             for c in string:
-                if not isAlphaNumeric(c):
+                if not c.isalpha() and not c.isdigit() and not c == " ":
                     raise ValueError("NG")
             print(doMorse(string))
         else:
