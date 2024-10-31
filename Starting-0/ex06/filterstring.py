@@ -3,6 +3,7 @@ from ft_filter import ft_filter
 
 
 def filterString(S: str, N: int):
+    """ Filter Strings """
     return list(ft_filter(lambda word: len(word) > N, S.split()))
 
 
