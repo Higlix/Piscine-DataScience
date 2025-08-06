@@ -3,9 +3,9 @@ import numpy as np
 
 def slice_me(family: list, start: int, end: int) -> list:
     """
-    This function takes a list and two indices, start and end.
-    It returns a new list containing the elements of
-    the original list from start to end.
+        This function takes a list and two indices, start and end.
+        It returns a new list containing the elements of
+        the original list from start to end.
     """
     try:
         assert start < len(family) and end <= len(family), \

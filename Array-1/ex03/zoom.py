@@ -15,7 +15,7 @@ def main(image_path: str = "../animal.jpeg"):
 Error: Unable to load image. Check the file path and file integrity.""")
         return
     h, w = img.shape[:2]
-    ci = img[int(h/4)-50:int(h/4)+350, int(w/4)+170:int(w/4)+570]
+    ci = img[int(h/4) - 50:int(h/4) + 350, int(w/4) + 170:int(w/4) + 570]
     ci = cv2.cvtColor(ci, cv2.COLOR_BGR2GRAY)
     single_column = ci.reshape(400, 400, 1)
 
